@@ -1,0 +1,56 @@
+<html>
+<h1>GenVol</h1>
+<hr/>
+
+<h2>DESCRIPTION</h2>
+画像データファイル群から、ボリュームデータ生成を生成します。
+
+<h2>USAGE</h2>
+<pre>
+  python genVol.py -o outfile [-bb x0 y0 z0 x1 y1 z1] infile1 infile2 ...
+</pre>
+
+<ul>
+<li>-o outfile<br>
+生成するボリュームデータファイルのパスを指定します。省略はできません。
+指定するファイルのフォーマットは、ファイル名の拡張子で判断されます。
+
+<ul>
+  <li> .vol .fdv : 4D Visualizerボリュームデータファイル
+  <li> .dat .avs : AVSボリュームデータファイル
+  <li> .sph      : V-Sphere/Sphere SPHファイルフォーマット(スカラー)
+</ul>
+
+<li>-bb x0 y0 z0 x1 y1 z1<br>
+バウンディングボックスを指定します。
+バウンディングボックスは、ボリュームデータが存在する立方体領域の
+最小頂点座標(x0, y0, z0)および最大頂点座標座標(x1, y1, z1)です。
+省略した場合は、(x0, y0, z0) = (0, 0, 0)、
+(x1, y1, z1) = (IMAX-1, JMAX-1, KMAX-1)とみなされます。ここで、
+(IMAX, JMAX, KMAX)は、ボリュームデータのサイズです。
+
+<li>infile1 infile2 ...<br>
+入力する画像ファイル群を指定します。指定した画像ファイルの数が
+生成されるボリュームデータのKMAXになります。
+画像ファイルのフォーマットは、ファイル名の拡張子で判断されます。
+
+<ul>
+  <li> .png : PNG
+  <li> .ppm : Portable Pixmap
+  <li> .pgm : Portable Graymap
+  <li> .bmp : Microsoft Bitmap
+  <li> .jpg : JPEG/JFIF
+  <li> .gif : GIF
+  <li> .tif : TIFF
+  <li> .dcm : DICOM(非圧縮のみ)
+</ul>
+</ul>
+
+<h2>DEPENDENCY</h2>
+以下に示すパッケージがPython環境にインストールされている必要があります。
+
+<ul>
+  <li> <a href="https://pillow.readthedocs.io/">Pillow - PIL(Python Imaging Library) fork</a>
+  <li> <a href="http://code.google.com/p/pydicom/">pydicom (DICOMファイル入力時)</a>
+</ul>
+</html>
