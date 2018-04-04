@@ -40,7 +40,7 @@ USAGE
 
 DEPENDENCY
   以下に示すパッケージがPython環境にインストールされている必要があります。
-  PIL - Python Imaging Library  http://www.pythonware.com/products/pil/
+  Pillow - PIL(Python Imaging Library) fork https://pillow.readthedocs.io/
   pydicom (DICOMファイル入力時) http://code.google.com/p/pydicom/
 
 """
