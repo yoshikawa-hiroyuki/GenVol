@@ -93,10 +93,10 @@ def LoadImage(filename):
     else:
         im = Image.open(filename)
 
-    if im.mode[0] in ('L', 'I'):
-        return im
-    else:
+    if 'RGB' in im.mode:
         return im.convert('L')
+    else:
+        return im
 
 
 def CreateFdvVol(outfile, infiles, bbox=None):
