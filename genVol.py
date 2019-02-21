@@ -41,7 +41,7 @@ USAGE
 DEPENDENCY
   以下に示すパッケージがPython環境にインストールされている必要があります。
   Pillow - PIL(Python Imaging Library) fork https://pillow.readthedocs.io/
-  pydicom (DICOMファイル入力時) https://github.com/pydicom/pydicom
+  pydicom (DICOMファイル入力時) https://github.com/pydicom/pydicom/pydicom
 
 """
 import sys, glob, operator
