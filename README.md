@@ -42,5 +42,5 @@ python genVol.py -o outfile [-bb x0 y0 z0 x1 y1 z1] infile1 infile2 ...
 以下に示すパッケージがPython環境にインストールされている必要があります。
 
   * Pillow - PIL(Python Imaging Library) fork  https://pillow.readthedocs.io/
-  * pydicom (DICOMファイル入力時) http://code.google.com/p/pydicom/
+  * pydicom (DICOMファイル入力時) https://github.com/pydicom/pydicom/pydicom
 
