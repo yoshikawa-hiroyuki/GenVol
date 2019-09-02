@@ -300,8 +300,11 @@ if __name__ == '__main__':
         #idx += 1
         #continue
         break
-
-    infiles = reduce(operator.add, map(glob.glob, sys.argv[idx:]))
+    try:
+        infiles = reduce(operator.add, map(glob.glob, sys.argv[idx:]))
+    except:
+        import functools # for python3
+        infiles = functools.reduce(operator.add, map(glob.glob, sys.argv[idx:]))
     numInfs = len(infiles)
     if len(outfile) < 4:
         print('%s: invalid outfile specified: %s' % (sys.argv[0], outfile))
